@@ -1,11 +1,8 @@
 import React from 'react';
+import AppRouter from 'routes/AppRouter';
 
 function App() {
-  return (
-    <div className='text-red-900'>
-      <p className='text-3xl'>Hello Everyone !!!</p>
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;
