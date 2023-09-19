@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'CabinetGrotesk';
-  src: url('./CabinetGrotesk_Complete/Fonts/Variable/CabinetGrotesk-Variable.ttf');
+  src: url('./font-files/CabinetGrotesk-Variable.ttf');
 }
 
 @font-face {
   font-family: 'Outfit';
-  src: url('./Outfit/Outfit-VariableFont_wght.ttf');
+  src: url('./font-files/Outfit-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('./Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf');
+  src: url('./font-files/Satoshi-Variable.ttf');
 }
 
 @font-face {
   font-family: 'AzeretMono';
-  src: url('./AzeretMono_Complete/Fonts/Variable/AzeretMono-Variable.ttf');
+  src: url('./font-files/AzeretMono-Variable.ttf');
 }

@@ -3,7 +3,7 @@
 }
 
 .footer_text {
-  @apply text-center font-sans;
+  @apply text-center font-sans font-light;
 }
 
 .footer_text_highlight {
