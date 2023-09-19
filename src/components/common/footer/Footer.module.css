@@ -1,0 +1,11 @@
+.footer_container {
+  @apply h-16 flex flex-col justify-center items-center absolute inset-x-0 bottom-0;
+}
+
+.footer_text {
+  @apply text-center font-sans;
+}
+
+.footer_text_highlight {
+  @apply text-secondary;
+}

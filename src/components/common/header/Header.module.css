@@ -1,0 +1,16 @@
+.header_container {
+  @apply h-24 sticky top-0 w-screen;
+}
+
+.header_content {
+  @apply lg:container mx-auto w-full h-full flex flex-row justify-between items-center;
+}
+
+.button_group {
+  @apply flex flex-row flex-nowrap gap-x-6;
+}
+
+.button {
+  @apply hover:text-secondary hover:cursor-pointer;
+  transition: all 0.25s ease;
+}

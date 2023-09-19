@@ -1,0 +1,29 @@
+.searchbar_container {
+  @apply w-full p-0 flex flex-row items-center;
+}
+
+.input {
+  @apply bg-white drop-shadow-md h-16 px-14 text-lg w-full font-normal font-sans text-lg;
+  padding-bottom: 4px;
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(to right, #ffbd39, #ff5739);
+  border-image-slice: 1;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.input::placeholder {
+  @apply text-secondary-text-color font-light;
+}
+
+.search_icon {
+  @apply absolute z-[6] text-secondary-text-color;
+  margin-left: 16px;
+}
+
+.cross_icon {
+  @apply z-[6] cursor-pointer;
+  margin-left: -40px;
+}

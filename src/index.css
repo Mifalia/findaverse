@@ -1,6 +1,11 @@
-/* src/styles.css */
+/* tailwind css import */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Your custom styles go here */
+/* custom styles */
+@import './assets/fonts/fonts.css';
+
+body {
+  @apply bg-primary-background-color text-primary-text-color;
+}

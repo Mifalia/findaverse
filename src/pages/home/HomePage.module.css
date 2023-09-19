@@ -1,0 +1,12 @@
+.section_container {
+  @apply h-full mx-auto max-w-2xl flex flex-col justify-center items-center;
+  min-height: 60vh;
+}
+
+.title {
+  @apply text-center font-bold font-sans text-5xl mb-12 w-full;
+}
+
+.description {
+  @apply text-center font-serif text-3xl mb-20 w-6/12 mx-auto w-full px-2;
+}
