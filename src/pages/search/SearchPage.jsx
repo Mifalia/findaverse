@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import s from './SearchPage.module.css';
 
 // services and utils import
@@ -13,8 +13,11 @@ import SearchBar from 'components/searchbar/SearchBar';
 import SearchItemsList from 'components/search/search-items-list/SearchItemsList';
 
 function SearchPage() {
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const q = searchParams.get('q');
+
+  const searchBarOnSubmit = (value) => navigate(`/search/?q=${value}`);
 
   useEffect(() => {
     SongsStore.searchAndLoad(q);
@@ -27,7 +30,7 @@ function SearchPage() {
       <Header />
       <div className={s.main_section}>
         <div className={s.searchbar_container}>
-          <SearchBar defaultValue={q} />
+          <SearchBar defaultValue={q} onSubmit={searchBarOnSubmit} />
         </div>
         <SearchItemsList items={SongsStore.itemsList} />
       </div>

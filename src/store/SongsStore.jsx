@@ -1,13 +1,13 @@
-import { makeAutoObservable, observable } from 'mobx';
+import { makeAutoObservable } from 'mobx';
 import SongsFetcher from 'services/SongsFetcher';
 
 class SongsStore {
   // states
-  @observable current = {};
-  @observable itemsList = [];
-  @observable isLoading = false; // this state is used for managing loading states through the whole app
+  current = {};
+  itemsList = [];
+  isLoading = false; // this state is used for managing loading states through the whole app
 
-  construct() {
+  constructor() {
     makeAutoObservable(this);
   }
 

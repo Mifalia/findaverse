@@ -14,12 +14,11 @@ function SearchItemsList({ items }) {
           title_with_featured,
           artist_names,
           id,
-          path,
         } = item.result;
 
         return (
-          <Link to={`/lyrics/${path}`}>
-            <SearchItem key={id}>
+          <Link to={`/lyrics/${id}`}>
+            <SearchItem key={index}>
               <SearchItem.Image src={song_art_image_thumbnail_url} />
               <SearchItem.Title>{title_with_featured}</SearchItem.Title>
               <SearchItem.Artist>{artist_names}</SearchItem.Artist>

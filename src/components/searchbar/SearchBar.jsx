@@ -28,7 +28,7 @@ function SearchBar({
 
   useEffect(() => {
     onChange(inputValue);
-  }, [inputValue]);
+  }, [inputValue, onChange]);
 
   // rendering
   return (
