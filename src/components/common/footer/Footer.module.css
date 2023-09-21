@@ -1,5 +1,5 @@
 .footer_container {
-  @apply h-16 flex flex-col justify-center items-center absolute inset-x-0 bottom-0;
+  @apply h-24 flex flex-col justify-center items-center mt-auto;
 }
 
 .footer_text {

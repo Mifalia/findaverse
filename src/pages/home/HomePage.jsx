@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import s from './HomePage.module.css';
 
 //components inmport
@@ -7,6 +8,12 @@ import Footer from 'components/common/footer/Footer';
 import SearchBar from 'components/searchbar/SearchBar';
 
 function HomePage() {
+  const navigate = useNavigate();
+  // searchbar submit callback
+  const handleSubmit = (q) => {
+    navigate(`/search/?q=${q}`);
+  };
+
   return (
     <div className={s.page_container}>
       <Header />
@@ -16,7 +23,7 @@ function HomePage() {
           Findaverse is simple web app for searching your fav songs lyrics
           online
         </p>
-        <SearchBar />
+        <SearchBar onSubmit={handleSubmit} />
       </div>
       <Footer />
     </div>

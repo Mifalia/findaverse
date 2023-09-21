@@ -1,0 +1,3 @@
+.list_container {
+  @apply flex flex-row flex-wrap justify-center items-start gap-4 max-w-5xl mx-auto;
+}

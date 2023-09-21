@@ -1,0 +1,25 @@
+.card_container {
+  @apply w-44 bg-white drop-shadow-md rounded-xl pt-2 pb-4 px-2 cursor-pointer;
+  border: 1px solid transparent;
+}
+
+.card_container:hover {
+  @apply drop-shadow-xl;
+  border: 1px solid #ffbd39;
+}
+
+.card_image_container {
+  @apply mx-auto;
+}
+
+.card_image {
+  @apply w-40 h-40 rounded;
+}
+
+.card_title {
+  @apply text-ellipsis text-base font-medium font-sans whitespace-nowrap overflow-hidden text-left w-full mt-4;
+}
+
+.card_artist {
+  @apply w-full text-ellipsis overflow-hidden font-light text-sm text-secondary whitespace-nowrap w-full;
+}

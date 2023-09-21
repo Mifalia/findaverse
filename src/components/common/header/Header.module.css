@@ -1,5 +1,6 @@
 .header_container {
-  @apply h-24 sticky top-0 w-screen;
+  @apply h-24 sticky top-0 w-screen bg-primary-background-color z-[10];
+  box-shadow: 0 10px 32px 16px #fbfbfba0;
 }
 
 .header_content {

@@ -1,6 +1,9 @@
+.page_container {
+  @apply h-screen flex flex-col;
+}
+
 .section_container {
-  @apply h-full mx-auto max-w-2xl flex flex-col justify-center items-center;
-  min-height: 60vh;
+  @apply h-full mx-auto max-w-2xl grow flex flex-col justify-center items-center;
 }
 
 .title {

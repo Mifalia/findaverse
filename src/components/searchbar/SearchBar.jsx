@@ -11,7 +11,7 @@ function SearchBar({
   defaultValue = '',
 }) {
   // local states
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState(defaultValue);
 
   // functions for handling the input
   const handleKeyUp = function (e) {
@@ -35,7 +35,6 @@ function SearchBar({
     <div className={s.searchbar_container}>
       <FiSearch size={24} className={s.search_icon} />
       <input
-        defaultValue={defaultValue}
         value={inputValue}
         type='search'
         placeholder='Write a part of the lyrics you want to find ...'
