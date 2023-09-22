@@ -25,15 +25,15 @@
 }
 
 .song_header_info_container {
-  @apply font-sans;
+  @apply font-sans flex-1 overflow-hidden;
 }
 
 .song_header_info_title {
-  @apply text-2xl lg:text-4xl font-bold;
+  @apply text-2xl lg:text-4xl font-bold whitespace-nowrap overflow-hidden text-ellipsis text-left;
 }
 
 .song_header_info_album {
-  @apply text-sm lg:text-base font-bold mb-2;
+  @apply text-sm lg:text-base font-bold mb-2 whitespace-nowrap overflow-hidden text-ellipsis text-left w-full;
 }
 
 .song_header_info_date {
