@@ -1,11 +1,9 @@
 .card_container {
-  @apply w-44 bg-white drop-shadow-md rounded-xl pt-2 pb-4 px-2 cursor-pointer;
-  border: 1px solid transparent;
+  @apply w-44 bg-white drop-shadow-md rounded-xl pt-2 pb-4 px-2 cursor-pointer border-2 border-transparent;
 }
 
 .card_container:hover {
-  @apply drop-shadow-xl;
-  border: 1px solid #ffbd39;
+  @apply drop-shadow-xl border-primary;
 }
 
 .card_image_container {

@@ -1,5 +1,5 @@
 .page_container {
-  @apply h-screen flex flex-col;
+  @apply min-h-screen flex flex-col;
 }
 
 .section_container {

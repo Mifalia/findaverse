@@ -3,7 +3,9 @@ import SongsFetcher from 'services/SongsFetcher';
 
 class SongsStore {
   // states
+  currentQuery = '';
   current = {};
+  currentLyrics = [];
   itemsList = [];
   isLoading = false; // this state is used for managing loading states through the whole app
 
@@ -14,6 +16,7 @@ class SongsStore {
   // actions
   async searchAndLoad(q) {
     try {
+      this.currentQuery = q;
       this.isLoading = true;
       this.itemsList = [];
       const response = await SongsFetcher.search(q);
@@ -28,8 +31,10 @@ class SongsStore {
   async findById(id) {
     try {
       this.isLoading = true;
-      const response = await SongsFetcher.findSong(id);
+      const response = await SongsFetcher.getSong(id);
       this.current = response.response.song;
+      const lyricsResponse = await SongsFetcher.getLyrics(this.current.path); // fethcing lyrics
+      this.current = { ...this.current, ...lyricsResponse };
       this.isLoading = false;
     } catch (error) {
       console.log('Unable to search songs');
@@ -38,6 +43,6 @@ class SongsStore {
   }
 }
 
-const SongStore = new SongsStore();
+const songsStore = new SongsStore();
 
-export default SongStore;
+export default songsStore;
