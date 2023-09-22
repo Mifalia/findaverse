@@ -9,6 +9,7 @@ import SongsStore from 'store/SongsStore';
 import Header from 'components/common/header/Header';
 import Footer from 'components/common/footer/Footer';
 import Button from 'components/common/button/Button';
+import SpinnerLayout from 'layouts/spinner-layout/SpinnerLayout';
 
 function LyricsPage() {
   const { id } = useParams();
@@ -29,7 +30,7 @@ function LyricsPage() {
     </div>
   );
 
-  if (isLoading) return <></>;
+  if (isLoading) return <SpinnerLayout />;
 
   return (
     <div className={s.page_container}>

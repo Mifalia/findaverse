@@ -11,6 +11,7 @@ import Footer from 'components/common/footer/Footer';
 import Header from 'components/common/header/Header';
 import SearchBar from 'components/searchbar/SearchBar';
 import SearchItemsList from 'components/search/search-items-list/SearchItemsList';
+import SpinnerLayout from 'layouts/spinner-layout/SpinnerLayout';
 
 function SearchPage() {
   const { currentQuery, isLoading, itemsList } = SongsStore;
@@ -27,7 +28,7 @@ function SearchPage() {
     // eslint-disable-next-line
   }, [q]);
 
-  if (isLoading) return <></>;
+  if (isLoading) return <SpinnerLayout />;
 
   return (
     <div className={s.page_container}>

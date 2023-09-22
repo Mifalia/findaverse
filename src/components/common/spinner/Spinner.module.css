@@ -1,0 +1,10 @@
+.spinner {
+  @apply h-20 w-20 border-8 border-primary border-t-transparent rounded-full;
+  animation: spin 1500ms ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(720deg);
+  }
+}
