@@ -13,6 +13,7 @@ import SearchBar from 'components/searchbar/SearchBar';
 import SearchItemsList from 'components/search/search-items-list/SearchItemsList';
 
 function SearchPage() {
+  const { currentQuery, isLoading } = SongsStore;
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const q = searchParams.get('q');
@@ -20,10 +21,12 @@ function SearchPage() {
   const searchBarOnSubmit = (value) => navigate(`/search/?q=${value}`);
 
   useEffect(() => {
-    SongsStore.searchAndLoad(q);
+    if (currentQuery?.trim() !== q?.trim()) {
+      SongsStore.searchAndLoad(q);
+    }
   }, [q]);
 
-  if (SongsStore.isLoading) return <></>;
+  if (isLoading) return <></>;
 
   return (
     <div className={s.page_container}>

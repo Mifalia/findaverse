@@ -16,7 +16,9 @@ function LyricsPage() {
   const { current, currentQuery, isLoading } = SongsStore;
 
   useEffect(() => {
-    SongsStore.findById(id);
+    if (parseInt(current.id) !== parseInt(id)) {
+      SongsStore.findById(id);
+    }
   }, [id]);
 
   const BackButton = () => (
