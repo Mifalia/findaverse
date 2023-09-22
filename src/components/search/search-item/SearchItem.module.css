@@ -1,5 +1,5 @@
 .card_container {
-  @apply w-44 bg-white drop-shadow-md rounded-xl pt-2 pb-4 px-2 cursor-pointer border-2 border-transparent;
+  @apply w-36 lg:w-44 bg-white drop-shadow-md rounded-xl pt-2 pb-4 px-2 cursor-pointer border-2 border-transparent;
 }
 
 .card_container:hover {
@@ -11,7 +11,7 @@
 }
 
 .card_image {
-  @apply w-40 h-40 rounded;
+  @apply w-32 h-32 lg:w-40 lg:h-40 rounded;
 }
 
 .card_title {

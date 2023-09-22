@@ -3,7 +3,7 @@
 }
 
 .input {
-  @apply bg-white drop-shadow-md h-16 px-14 text-lg w-full font-normal font-sans text-lg;
+  @apply bg-white drop-shadow-md h-14 lg:h-16 px-14 text-base lg:text-lg w-full font-normal font-sans text-lg;
   padding-bottom: 4px;
   border-top: 5px solid transparent;
   border-image: linear-gradient(to right, #ffbd39, #ff5739);

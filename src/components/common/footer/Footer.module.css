@@ -1,9 +1,9 @@
 .footer_container {
-  @apply h-24 flex flex-col justify-center items-center mt-auto;
+  @apply h-24 flex flex-col justify-center items-center mt-auto lg:px-0 px-4;
 }
 
 .footer_text {
-  @apply text-center font-sans font-light;
+  @apply text-center font-sans font-light lg:text-base text-sm;
 }
 
 .footer_text_highlight {

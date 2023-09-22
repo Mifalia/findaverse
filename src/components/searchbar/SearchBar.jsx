@@ -36,7 +36,7 @@ function SearchBar({
       <FiSearch size={24} className={s.search_icon} />
       <input
         value={inputValue}
-        type='search'
+        type='text'
         placeholder='Write a part of the lyrics you want to find ...'
         className={s.input}
         onKeyUp={handleKeyUp}

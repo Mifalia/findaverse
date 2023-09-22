@@ -18,9 +18,9 @@ function Header() {
         </Link>
         <p className={s.button_group}>
           <a href={githubLink}>
-            <AiOutlineGithub size={40} className={s.button} />
+            <AiOutlineGithub size={32} className={s.button} />
           </a>
-          <MdOutlineLightMode size={40} className={s.button} />
+          <MdOutlineLightMode size={32} className={s.button} />
         </p>
       </div>
     </header>

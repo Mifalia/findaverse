@@ -3,13 +3,14 @@
 }
 
 .section_container {
-  @apply h-full mx-auto max-w-2xl grow flex flex-col justify-center items-center;
+  @apply h-full mx-auto max-w-2xl grow flex flex-col justify-center items-center
+  lg:p-0 px-4 py-8;
 }
 
 .title {
-  @apply text-center font-bold font-sans text-5xl mb-12 w-full;
+  @apply text-center font-bold font-sans text-3xl lg:text-5xl mb-8 lg:mb-12 w-full;
 }
 
 .description {
-  @apply text-center font-serif text-3xl mb-20 w-6/12 mx-auto w-full px-2;
+  @apply text-center font-serif text-2xl lg:text-3xl mb-8 lg:mb-20 w-6/12 mx-auto w-full px-2;
 }

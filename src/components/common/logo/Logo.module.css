@@ -3,5 +3,5 @@
 }
 
 .logo_text {
-  @apply text-4xl font-bold font-sans inline-block text-primary-text-color;
+  @apply text-2xl lg:text-4xl font-bold font-sans inline-block text-primary-text-color;
 }

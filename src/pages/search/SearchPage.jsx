@@ -13,7 +13,7 @@ import SearchBar from 'components/searchbar/SearchBar';
 import SearchItemsList from 'components/search/search-items-list/SearchItemsList';
 
 function SearchPage() {
-  const { currentQuery, isLoading } = SongsStore;
+  const { currentQuery, isLoading, itemsList } = SongsStore;
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const q = searchParams.get('q');
@@ -24,6 +24,7 @@ function SearchPage() {
     if (currentQuery?.trim() !== q?.trim()) {
       SongsStore.searchAndLoad(q);
     }
+    // eslint-disable-next-line
   }, [q]);
 
   if (isLoading) return <></>;
@@ -35,7 +36,15 @@ function SearchPage() {
         <div className={s.searchbar_container}>
           <SearchBar defaultValue={q} onSubmit={searchBarOnSubmit} />
         </div>
-        <SearchItemsList items={SongsStore.itemsList} />
+        {itemsList.length !== 0 ? (
+          <SearchItemsList items={itemsList} />
+        ) : (
+          <div className={s.empty_container}>
+            <p className={s.empty_text}>
+              Sorry, could not find any result for "{currentQuery}"
+            </p>
+          </div>
+        )}
       </div>
       <Footer />
     </div>

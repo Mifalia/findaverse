@@ -1,24 +1,27 @@
 .page_container {
-  @apply flex flex-col min-h-screen overflow-y-scroll;
+  @apply flex flex-col min-h-screen;
 }
 
 .main_section {
-  @apply container mx-auto grow py-6;
+  @apply container mx-auto grow py-6 overflow-y-scroll;
 }
 
 .backButton_container {
-  @apply mb-6;
+  @apply mb-6
+  mx-2
+  md:mx-0;
 }
 
 .song_header_container {
-  @apply p-4 bg-primary-container flex flex-row justify-start items-center gap-x-8;
+  @apply p-4 bg-primary-container flex flex-row justify-start items-center gap-x-4;
 }
 
 .song_header_image_container {
+  @apply p-0;
 }
 
 .song_header_image {
-  @apply w-40 h-40 rounded;
+  @apply h-32 w-32 lg:w-40 lg:h-40 rounded;
 }
 
 .song_header_info_container {
@@ -26,15 +29,15 @@
 }
 
 .song_header_info_title {
-  @apply text-4xl font-bold;
+  @apply text-2xl lg:text-4xl font-bold;
 }
 
 .song_header_info_album {
-  @apply text-base font-bold mb-2;
+  @apply text-sm lg:text-base font-bold mb-2;
 }
 
 .song_header_info_date {
-  @apply text-secondary-text-color text-sm mt-4;
+  @apply text-secondary-text-color text-sm mt-2;
 }
 
 .lyrics_container {
