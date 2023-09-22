@@ -7,11 +7,10 @@ import s from './SearchPage.module.css';
 import SongsStore from 'store/SongsStore';
 
 // components import
-import Footer from 'components/common/footer/Footer';
-import Header from 'components/common/header/Header';
 import SearchBar from 'components/searchbar/SearchBar';
 import SearchItemsList from 'components/search/search-items-list/SearchItemsList';
 import SpinnerLayout from 'layouts/spinner-layout/SpinnerLayout';
+import PageLayout from 'layouts/page-layout/PageLayout';
 
 function SearchPage() {
   const { currentQuery, isLoading, itemsList } = SongsStore;
@@ -31,8 +30,7 @@ function SearchPage() {
   if (isLoading) return <SpinnerLayout />;
 
   return (
-    <div className={s.page_container}>
-      <Header />
+    <PageLayout pageTitle={`Search`}>
       <div className={s.main_section}>
         <div className={s.searchbar_container}>
           <SearchBar defaultValue={q} onSubmit={searchBarOnSubmit} />
@@ -47,8 +45,7 @@ function SearchPage() {
           </div>
         )}
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }
 

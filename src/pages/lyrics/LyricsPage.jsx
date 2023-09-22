@@ -6,10 +6,9 @@ import s from './LyricsPage.module.css';
 import SongsStore from 'store/SongsStore';
 
 // components import
-import Header from 'components/common/header/Header';
-import Footer from 'components/common/footer/Footer';
 import Button from 'components/common/button/Button';
 import SpinnerLayout from 'layouts/spinner-layout/SpinnerLayout';
+import PageLayout from 'layouts/page-layout/PageLayout';
 
 function LyricsPage() {
   const { id } = useParams();
@@ -20,6 +19,7 @@ function LyricsPage() {
     if (parseInt(current.id) !== parseInt(id)) {
       SongsStore.findById(id);
     }
+    // eslint-disable-next-line
   }, [id]);
 
   const BackButton = () => (
@@ -33,8 +33,7 @@ function LyricsPage() {
   if (isLoading) return <SpinnerLayout />;
 
   return (
-    <div className={s.page_container}>
-      <Header />
+    <PageLayout pageTitle={`Lyrics`}>
       <div className={s.main_section}>
         {currentQuery.trim() && <BackButton />}
         <div className={s.song_header_container}>
@@ -68,8 +67,7 @@ function LyricsPage() {
             ))}
         </div>
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }
 

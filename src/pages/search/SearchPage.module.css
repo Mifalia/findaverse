@@ -3,7 +3,6 @@
 }
 
 .main_section {
-  @apply container mx-auto grow overflow-y-scroll lg:py-10 py-6 px-4;
 }
 
 .searchbar_container {
@@ -16,7 +15,7 @@
 }
 
 .empty_text {
-  @apply font-serif font-light text-secondary-text-color
+  @apply font-serif font-light text-secondary-text-color text-center
   text-xl
   lg:text-2xl;
 }

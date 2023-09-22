@@ -1,0 +1,18 @@
+.page_container {
+  @apply h-screen flex flex-col justify-center items-center p-4;
+}
+
+.heading {
+  @apply text-4xl lg:text-5xl font-sans font-bold my-2;
+}
+
+.description {
+  @apply font-serif font-medium
+  text-base lg:text-lg;
+}
+
+.link_container {
+  @apply font-bold font-serif text-primary hover:text-secondary 
+  text-base lg:text-lg;
+  transition: all 0.25s ease;
+}

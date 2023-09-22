@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import s from './HomePage.module.css';
 
 //components inmport
-import Header from 'components/common/header/Header';
-import Footer from 'components/common/footer/Footer';
 import SearchBar from 'components/searchbar/SearchBar';
+import PageLayout from 'layouts/page-layout/PageLayout';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -15,8 +14,7 @@ function HomePage() {
   };
 
   return (
-    <div className={s.page_container}>
-      <Header />
+    <PageLayout pageTitle={`Welcome`}>
       <div className={s.section_container}>
         <h1 className={s.title}>Welcome to Findaverse</h1>
         <p className={s.description}>
@@ -25,8 +23,7 @@ function HomePage() {
         </p>
         <SearchBar onSubmit={handleSubmit} />
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }
 

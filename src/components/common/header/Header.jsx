@@ -4,7 +4,7 @@ import s from './Header.module.css';
 // components import
 import { Link } from 'react-router-dom';
 import { AiOutlineGithub } from 'react-icons/ai';
-import { MdOutlineLightMode } from 'react-icons/md';
+// import { MdOutlineLightMode } from 'react-icons/md';
 import Logo from '../logo/Logo';
 
 function Header() {
@@ -20,7 +20,7 @@ function Header() {
           <a href={githubLink}>
             <AiOutlineGithub size={32} className={s.button} />
           </a>
-          <MdOutlineLightMode size={32} className={s.button} />
+          {/* <MdOutlineLightMode size={32} className={s.button} /> */}
         </p>
       </div>
     </header>

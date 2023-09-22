@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from 'pages/home/HomePage';
 import SearchPage from 'pages/search/SearchPage';
 import LyricsPage from 'pages/lyrics/LyricsPage';
+import NotFoundPage from 'pages/not-found/NotFoundPage';
 
 // component
 function AppRouter() {
@@ -14,6 +15,7 @@ function AppRouter() {
         <Route path='/' element={<HomePage />} />
         <Route path='/search/' element={<SearchPage />} />
         <Route path='/lyrics/:id' element={<LyricsPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -3,8 +3,8 @@
 }
 
 .section_container {
-  @apply h-full mx-auto max-w-2xl grow flex flex-col justify-center items-center
-  lg:p-0 px-4 py-8;
+  @apply h-full mx-auto max-w-2xl grow flex flex-col justify-center items-center mt-10
+  /* lg:p-0 px-4 py-8; */;
 }
 
 .title {

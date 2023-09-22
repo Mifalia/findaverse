@@ -1,0 +1,9 @@
+.page_container {
+  @apply flex flex-col min-h-screen;
+}
+
+.main_section {
+  @apply container mx-auto overflow-y-scroll grow 
+  py-6 px-4 
+  lg:py-8;
+}
