@@ -15,12 +15,8 @@ function LyricsPage() {
 
   const { current, currentQuery, isLoading } = SongsStore;
 
-  const loadPageData = async () => {
-    await SongsStore.findById(id);
-  };
-
   useEffect(() => {
-    if (id) loadPageData();
+    SongsStore.findById(id);
   }, [id]);
 
   const BackButton = () => (
