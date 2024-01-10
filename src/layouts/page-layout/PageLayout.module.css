@@ -3,7 +3,11 @@
 }
 
 .main_section {
-  @apply container mx-auto overflow-y-scroll grow 
+  @apply container mx-auto grow 
   py-6 px-4 
   lg:py-8;
+}
+
+.main_section::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
