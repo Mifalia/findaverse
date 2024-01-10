@@ -1,3 +1,57 @@
+# How to get started with the project ?
+
+To get started with Findaverse, you need to follow the next instructions :
+
+1. Clone the project repo and install dependencies
+
+```bash
+
+$  git  clone  https://github.com/Mifalia/findaverse.git
+
+```
+
+```bash
+
+$  cd  findaverse
+
+```
+
+```bash
+
+$  npm  install
+
+```
+
+2. Create a .env file based on .env.example on your project root
+
+```text
+
+# .env
+
+REACT_APP_GITHUB_REPO=https://github.com/Mifalia/findaverse
+
+REACT_APP_API_URL=https://api.genius.com/
+
+REACT_APP_API_KEY=your_genius_api_key
+
+REACT_APP_LYRICS_API_URL=lyrics_provider_api
+
+```
+
+3. Sign up to the [genius api](https://genius.com/signup_or_login) and [generate an api client](https://genius.com/api-clients) to get you api key
+
+4. Copy the generated api_key and paste it into .env at REACT_APP_API_KEY
+
+5. Start your local server
+
+```bash
+
+$  npm  start
+
+```
+
+Mazotoa ary mikaody !
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
