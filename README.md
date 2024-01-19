@@ -34,7 +34,7 @@ REACT_APP_API_URL=https://api.genius.com/
 
 REACT_APP_API_KEY=your_genius_api_key
 
-REACT_APP_LYRICS_API_URL=lyrics_provider_api
+REACT_APP_LYRICS_API_URL=https://genius-lyrics-scrapper.vercel.app/
 
 ```
 
